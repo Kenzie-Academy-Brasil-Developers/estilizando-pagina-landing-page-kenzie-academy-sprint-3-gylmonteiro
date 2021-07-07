@@ -5,50 +5,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="icon-96x96.webp">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/img/css/style.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   <title>Landing Page Kenzie Academy</title>
 </head>
 <body>
-  
-  <!-- CABEÇALHO -->
-  <header class="topo">
+  <div class="uniao">
+    <!-- CABEÇALHO -->
+    <header class="topo">
+      
+      <div class="large-container">
+        <!-- LOGO -->
+        <figure>
+          <img src="assets/img/logo.svg" alt="Logo Kenzie Academy">
+          <figcaption>Logo Kenzie Academy</figcaption>  
+        </figure>
 
-    <div class="large-container">
-      <!-- LOGO -->
-      <figure>
-        <img src="assets/img/logo.svg" alt="Logo Kenzie Academy">
-        <figcaption>Logo Kenzie Academy</figcaption>  
-      </figure>
-
-      <!-- MENU DE NAVEGAÇÃO -->
-      <nav>
-        <ul>
-          <li><a href="#1">Sobre a Kenzie</a></li>
-          <li><a href="#2">Agenda</a></li>
-          <li><a href="#3">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-
-  </header>
-
-  <!-- PÁGINA INICIAL -->
-  <main class="inicial">
-
-    <!-- ÁREA DE DESTAQUE -->
-    <section class="secaoDestaque">
-
-      <h2>Lorem ipsum dolor sit Python</h2>
-      <p>100% Online</p>
-
-      <!-- FORMULÁRIO -->
-      <div class="secaoDestaqueFormulario">
-        <input type="email"  placeholder="E-mail" required>
-        <button type="button">Subscribe</button>
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav>
+          <ul>
+            <li><a href="#1">Sobre a Kenzie</a></li>
+            <li><a href="#2">Agenda</a></li>
+            <li><a href="#3">Contato</a></li>
+          </ul>
+        </nav>
+        <i class="fi-rr-align-justify"></i>
       </div>
 
-    </section>
+    </header>
 
+    <!-- PÁGINA INICIAL -->
+    <main class="inicial">
+
+      <!-- ÁREA DE DESTAQUE -->
+      <section class="secaoDestaque">
+
+        <h2>Lorem ipsum dolor sit Python</h2>
+        <p>100% Online</p>
+
+        <!-- FORMULÁRIO -->
+        <div class="secaoDestaqueFormulario">
+          <input type="email"  placeholder="E-mail" required>
+          <button type="button">Subscribe</button>
+        </div>
+
+      </section>
+  </div>
     <!-- SEÇÃO SOBRE -->
     <section class="secaoSobre">
 
@@ -77,45 +79,47 @@
 
         </div>
 
-        <!-- COLUNA ESQUERDA -->
-        <div class="flex-col">
+        <div class="fundoCinza">
 
-            <figure>
-              <img src="assets/img/JavaScript-logo.png" alt="Java Script">
-              <figcaption>Java Script</figcaption>  
-            </figure>      
-  
+          <!-- COLUNA ESQUERDA -->
+          <div class="flex-col">
+
+              <figure>
+                <img src="assets/img/JavaScript-logo.png" alt="Java Script">
+                <figcaption>Java Script</figcaption>  
+              </figure>      
+    
+            </div>
+
+          <!-- !-- COLUNA DIREITA -- -->
+          <div class="flex-col">
+
+              <h2 id="javaScript"> LOREM IPSUM DOLOR SIT JAVASCRIPT</h2>
+              <ul>
+                  <li>The standard Lorem Ipsum passage, used since the 1500s</li>
+                  <li>Section 1.10.32 of "de Finibus Bonorum et Malorum" by Cicero in 45 BC</li>
+                  <li>1914 translation by H. Rackham</li>
+                  <li>Section 1.10.33 of "de Finibus Bonorum et Malorum", by Cicero in 45 BC</li>
+                  <li>1914 translation by H. Rackham</li>
+              </ul>
+
           </div>
 
-        <!-- COLUNA DIREITA -->
-        <div class="flex-col">
-
-            <h2> LOREM IPSUM DOLOR SIT JAVASCRIPT</h2>
-            <ul>
-                <li>The standard Lorem Ipsum passage, used since the 1500s</li>
-                <li>Section 1.10.32 of "de Finibus Bonorum et Malorum" by Cicero in 45 BC</li>
-                <li>1914 translation by H. Rackham</li>
-                <li>Section 1.10.33 of "de Finibus Bonorum et Malorum", by Cicero in 45 BC</li>
-                <li>1914 translation by H. Rackham</li>
-            </ul>
-
         </div>
-
-        
 
       </article>
 
     </section>
 
-    <!-- SEÇÃO CURSOS -->
-    <section class="secaoCursos">
+    <!-- SEÇÃO CURSOS --
+    !-- <section class="secaoCursos">
 
       <article>
 
         <h2>COURSES</h2>
         <p>What we offer</p>
 
-        <!-- LISTA DE CURSOS -->
+        !-- LISTA DE CURSOS --
         <ul>
         
           <li>
@@ -165,7 +169,7 @@
       <h2>SCHEDULE</h2>
       <p>Lorem ipsum dolor sit schedule</p>
 
-      <!-- LISTA CALENDÁRIO -->
+      !-- LISTA CALENDÁRIO --
       <ul class="calendario">
 
         <li>
@@ -206,7 +210,7 @@
 
       <div class="flex">
 
-        <!-- COLUNA LADO ESQUERDO -->
+        !-- COLUNA LADO ESQUERDO --
         <div class="flex-col">
           
           <div class="secaoContato-informacoes">
@@ -223,7 +227,7 @@
 
         </div>
 
-        <!-- COLUNA LADO DIRETO -->
+        !-- COLUNA LADO DIRETO --
         <div class="flex-col">
           
           <h2>Contact</h2>
@@ -253,13 +257,13 @@
 
       </div>
 
-    </section>
+    </section>-->
 
   </main>
 
-  <footer>
+  <!-- <footer>
     <p>Kenzie Academy - <a href="kenzie.com.br">kenzie.com.br</a></p>
-  </footer>
+  </footer>  -->
 
   <script src="assets/js/script.js"></script>
 </body>
