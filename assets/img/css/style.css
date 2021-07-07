@@ -65,9 +65,9 @@ div.full-container{
 }
 div.large-container{
     padding: 10px;
-    width: 100%;
     max-width: 1170px;
-    margin:0 auto;
+    /* margin: auto; */
+    display: flex;
     justify-content: space-between;
 }
 div.container{
@@ -123,11 +123,13 @@ font-family: var(--fontLato);
 
 .flex-col button{
     background-color: var(--branco);
-    border: 1px solid rgb(209, 201, 201);
+    border: 1px solid rgb(228, 224, 224);
     padding:20px;
     border-radius: 10px;
     font-family: var(--fontLato);
     font-size: 19px;
+    color:rgb(39, 38, 38);
+    width: 300px;
 }
 
 .flex-col figure  {
@@ -170,12 +172,6 @@ header{
     
 }
 
-.large-container{
-    display: flex;
-    flex-direction: row;
-    
-}
-
 figcaption {
     display: none;
 }
@@ -208,11 +204,14 @@ figcaption {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding-bottom: 70px;
     
 }
 .secaoDestaqueFormulario input{
     width: 50%;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
     padding: 10px;
 
 }
@@ -220,12 +219,12 @@ figcaption {
 .secaoDestaqueFormulario button {
     background-color: var(--azulClaro);
     color: var(--branco);
-    border-end-end-radius: 5px;
-    border-start-end-radius: 5px;
+    border-radius: 0 5px 5px 0;
     font-family: var(--fontLato);
     font-size: 14px;
-    border-color: var(--azulClaro);
+    border: none;
     width: 25%;
+    height: 40px;
 }
 
 
@@ -266,6 +265,7 @@ main{
     padding: 45px 0;
 }
     article img {
+    margin: auto;
     width: 130px;
     height: 90px;
     object-fit: contain;
@@ -381,9 +381,31 @@ main{
         justify-content: center;
         align-items: center;
     }
+    
+    .secaoContato-informacoes ul{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        list-style: none;
+        color: var(--cinzaClaro)
+    }
+    .secaoContato-informacoes ul li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
     .secaoContato-informacoes li a{
         text-decoration:  none;
         color: var(--cinzaClaro);
+      
+        
+    }
+    .secaoContato-informacoes ul li img{
+       color: var(--cinzaClaro);
+       width: 20px;
+       margin-right: 10px;
+    
+        
     }
     .form-input-model input, textarea{
         width: 70vw;
@@ -466,16 +488,36 @@ footer, label{
 }
 
 /* MEDIA QUERIES */
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 768px) {
         nav ul {
             display: none;
-        
         }
+
+       
 
        }
     
    
-    @media screen and (min-width: 800px) {
-       
+    @media screen and (min-width: 768px) {
+        nav ul {
+            display: flex;
+            text-decoration: none;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--branco);
+            margin: 0 5px;
+        }
+        .topo i {
+            display: none;
+        }
+
+        .larger-container {
+            background-color: var(--azulEscuro);
+        }
+        .inicial {
+            background-image: url(../background-destaque.webp);
+
+        }
     }
 /* MEDIA QUERIES */
