@@ -65,9 +65,9 @@ div.full-container{
 }
 div.large-container{
     padding: 10px;
-    width: 100%;
     max-width: 1170px;
-    margin:0 auto;
+    /* margin: auto; */
+    display: flex;
     justify-content: space-between;
 }
 div.container{
@@ -76,16 +76,6 @@ div.container{
     margin:0 auto;
 }
 
-/* GERAL */
-  
-/* HTML */
-html{
-
-
-}
-/* HTML */
-  
-/* BODY */
 body{
 font-family: var(--fontLato);
 }
@@ -123,11 +113,13 @@ font-family: var(--fontLato);
 
 .flex-col button{
     background-color: var(--branco);
-    border: 1px solid rgb(209, 201, 201);
+    border: 1px solid rgb(228, 224, 224);
     padding:20px;
     border-radius: 10px;
     font-family: var(--fontLato);
     font-size: 19px;
+    color:rgb(39, 38, 38);
+    width: 300px;
 }
 
 .flex-col figure  {
@@ -159,20 +151,10 @@ font-family: var(--fontLato);
 }
 
 .flex-col ul li {
-    /* padding: 5px; */
-    line-height: 30px;
-    
-}
-/* BODY */
-  
-/* HEADER */
-header{
-    
+    line-height: 30px;  
 }
 
-.large-container{
-    display: flex;
-    flex-direction: row;
+header{
     
 }
 
@@ -208,11 +190,14 @@ figcaption {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding-bottom: 70px;
     
 }
 .secaoDestaqueFormulario input{
     width: 50%;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
     padding: 10px;
 
 }
@@ -220,42 +205,15 @@ figcaption {
 .secaoDestaqueFormulario button {
     background-color: var(--azulClaro);
     color: var(--branco);
-    border-end-end-radius: 5px;
-    border-start-end-radius: 5px;
+    border-radius: 0 5px 5px 0;
     font-family: var(--fontLato);
     font-size: 14px;
-    border-color: var(--azulClaro);
+    border: none;
     width: 25%;
+    height: 40px;
 }
+/*secaoCursos*/
 
-
-/* HEADER */
-  
-/* FOOTER */
-footer{
-
-
-}
-/* FOOTER */
-
-/* INICIAL */
-main{
-
-}
-/* INICIAL */
-
-/* EXTRAS */
-
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
-
-/* EXTRAS */
 .secaoCursos {
     display: flex;
     align-items: center;
@@ -266,6 +224,7 @@ main{
     padding: 45px 0;
 }
     article img {
+    margin: auto;
     width: 130px;
     height: 90px;
     object-fit: contain;
@@ -381,9 +340,31 @@ main{
         justify-content: center;
         align-items: center;
     }
+    
+    .secaoContato-informacoes ul{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        list-style: none;
+        color: var(--cinzaClaro)
+    }
+    .secaoContato-informacoes ul li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
     .secaoContato-informacoes li a{
         text-decoration:  none;
         color: var(--cinzaClaro);
+      
+        
+    }
+    .secaoContato-informacoes ul li img{
+       color: var(--cinzaClaro);
+       width: 20px;
+       margin-right: 10px;
+    
+        
     }
     .form-input-model input, textarea{
         width: 70vw;
@@ -400,14 +381,17 @@ main{
        
     }
 
-   .flex-col .submit{        
-        display: flex;
-        justify-content: flex-end; 
+   .flex-col .submit input{   
+       float: right;     
+        padding: 10px;
     }
     
 footer, label{
     display: none;
 }
+
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 768px) {
     .secaoCursos ul{
         max-width: 1028px;
@@ -429,7 +413,9 @@ footer, label{
     }
     .secaoCalendar p{
         line-height: 1.2;
-        ;
+    }
+    button:hover{
+        background-color: #303030;
     }
     
     .secaoContato .flex-col{
@@ -449,33 +435,91 @@ footer, label{
         margin-right: 0;
     }
 
-    .flex-col .form-input-model{
-     
-    }
     .form-input-model textarea{
        width: 400px;
     }
     .secaoContato h2{
-       
+       position: absolute;
+       margin-bottom: 340px;
     }
-    footer{
-        text-transform: uppercase;
-        text-decoration: none;
-        background-color: #00043e;
+    .flex-col .submit input:hover{
+        box-shadow: 5px 5px var(--cinza);
     }
-}
 
-/* MEDIA QUERIES */
-    @media screen and (max-width: 400px) {
+footer{
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+        
+    }
+    footer a{
+        text-decoration: none;
+    }
+    footer img{
+        width: 30px;
+    }
+    footer a:hover{
+        color: red;
+    }
+}   
+
+    @media screen and (max-width: 768px) {
         nav ul {
             display: none;
-        
         }
-
-       }
+    }   
     
    
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 768px) {
+        nav ul {
+            display: flex;
+            text-decoration: none;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--branco);
+            margin: 0 5px;
+        }
+        .topo i {
+            display: none;
+        }
+
+        .larger-container {
+            background-color: var(--azulEscuro);
+        }
+        .inicial {
+            background-size: 100% 100%;
+            background-image: url(../background-destaque.webp);
+
+        }
+        .row{
+            margin: 0 auto;
+            width: 95vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 32px;
        
+        }
+     
+        .fundoCinza{
+            margin: 0 auto;
+            width: 100vw;
+            margin-bottom: 50px;;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 32px;
+            
+        }
+
+        .row img{
+            height: 300px;
+        }
+        .fundoCinza img{
+            height: 300px;
+        }
+
+
+
+
     }
 /* MEDIA QUERIES */
