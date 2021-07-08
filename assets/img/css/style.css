@@ -76,16 +76,6 @@ div.container{
     margin:0 auto;
 }
 
-/* GERAL */
-  
-/* HTML */
-html{
-
-
-}
-/* HTML */
-  
-/* BODY */
 body{
 font-family: var(--fontLato);
 }
@@ -161,13 +151,9 @@ font-family: var(--fontLato);
 }
 
 .flex-col ul li {
-    /* padding: 5px; */
-    line-height: 30px;
-    
+    line-height: 30px;  
 }
-/* BODY */
-  
-/* HEADER */
+
 header{
     
 }
@@ -226,35 +212,8 @@ figcaption {
     width: 25%;
     height: 40px;
 }
+/*secaoCursos*/
 
-
-/* HEADER */
-  
-/* FOOTER */
-footer{
-
-
-}
-/* FOOTER */
-
-/* INICIAL */
-main{
-
-}
-/* INICIAL */
-
-/* EXTRAS */
-
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
-
-/* EXTRAS */
 .secaoCursos {
     display: flex;
     align-items: center;
@@ -422,14 +381,17 @@ main{
        
     }
 
-   .flex-col .submit{        
-        display: flex;
-        justify-content: flex-end; 
+   .flex-col .submit input{   
+       float: right;     
+        padding: 10px;
     }
     
 footer, label{
     display: none;
 }
+
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 768px) {
     .secaoCursos ul{
         max-width: 1028px;
@@ -451,7 +413,9 @@ footer, label{
     }
     .secaoCalendar p{
         line-height: 1.2;
-        ;
+    }
+    button:hover{
+        background-color: #303030;
     }
     
     .secaoContato .flex-col{
@@ -471,31 +435,39 @@ footer, label{
         margin-right: 0;
     }
 
-    .flex-col .form-input-model{
-     
-    }
     .form-input-model textarea{
        width: 400px;
     }
     .secaoContato h2{
-       
+       position: absolute;
+       margin-bottom: 340px;
     }
-    footer{
-        text-transform: uppercase;
-        text-decoration: none;
-        background-color: #00043e;
+    .flex-col .submit input:hover{
+        box-shadow: 5px 5px var(--cinza);
     }
-}
 
-/* MEDIA QUERIES */
+footer{
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+        
+    }
+    footer a{
+        text-decoration: none;
+    }
+    footer img{
+        width: 30px;
+    }
+    footer a:hover{
+        color: red;
+    }
+}   
+
     @media screen and (max-width: 768px) {
         nav ul {
             display: none;
         }
-
-       
-
-       }
+    }   
     
    
     @media screen and (min-width: 768px) {
@@ -516,8 +488,38 @@ footer, label{
             background-color: var(--azulEscuro);
         }
         .inicial {
+            background-size: 100% 100%;
             background-image: url(../background-destaque.webp);
 
         }
+        .row{
+            margin: 0 auto;
+            width: 95vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 32px;
+       
+        }
+     
+        .fundoCinza{
+            margin: 0 auto;
+            width: 100vw;
+            margin-bottom: 50px;;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 32px;
+            
+        }
+
+        .row img{
+            height: 300px;
+        }
+        .fundoCinza img{
+            height: 300px;
+        }
+
+
+
+
     }
 /* MEDIA QUERIES */
